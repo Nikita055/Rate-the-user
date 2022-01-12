@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rate_the_user_nav_graph"
+    app:startDestination="@id/rateUserBottomSheet">
+
+    <fragment
+        android:id="@+id/buttonFragment"
+        android:name="com.example.libratetheuser.ButtonFragment"
+        android:label="ButtonFragment" >
+
+        <deepLink
+            android:id="@+id/deepLink1"
+            app:uri="librateuser://rateuser" />
+        <action
+            android:id="@+id/action_buttonFragment_to_rateUserBottomSheet"
+            app:destination="@id/rateUserBottomSheet" />
+    </fragment>
+    <dialog
+        android:id="@+id/rateUserBottomSheet"
+        android:name="com.example.libratetheuser.bottomsheet.RateUserBottomSheet"
+        android:label="RateUserBottomSheet" >
+        <action
+            android:id="@+id/action_rateUserBottomSheet_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.libratetheuser.DashboardFragment"
+        android:label="DashboardFragment" />
+</navigation>

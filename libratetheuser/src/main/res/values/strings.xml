@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">libRatetheUser</string>
+    <string name="enter_feedback">enter feedback</string>
+    <string name="submit">Submit</string>
+</resources>
